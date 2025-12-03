@@ -9,7 +9,7 @@ const Modul = () => {
     <div>
       <button onClick={() => setOpen(true)}>
 
-        <div className="group flex justify-center items-center hover:bg-white relative top-[-250px] hover:scale-110 transition-transform duration-300 w-[460px] h-[250px] text-gray-400 border-[1px] border-dashed border-gray-500 rounded-2xl">
+        <div className="group flex justify-center items-center hover:bg-white relative top-[-150px] hover:scale-110 transition-transform duration-300 w-[460px] h-[250px] text-gray-400 border-[1px] border-dashed border-gray- rounded-2xl">
           <div className=" text-xl  flex items-center justify-center transition group-hover:bg-blue-50 w-[50px] h-[50px] rounded group-hover:text-blue-700  ">
             <PlusOutlined />
           </div>
