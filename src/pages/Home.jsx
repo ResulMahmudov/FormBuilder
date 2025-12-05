@@ -5,7 +5,7 @@ const Home = () => {
   return (
 
     <div className='flex w-full h-[calc(100vh-64px)] '>
-      <section className="flex-1  flex items-center  justify-center bg-[radial-gradient(#e5e7eb_1px,transparent_1px)] [background-size:16px_16px] bg-white">
+      <section className="flex-1  flex items-start  justify-center bg-[radial-gradient(#e5e7eb_1px,transparent_1px)] [background-size:16px_16px] bg-white">
         <Modul />
       </section>
 
