@@ -60,8 +60,7 @@ const Modul = () => {
 
       <div className='mt-4 flex  items-center justify-center flex-col gap-4'>
         {form.map((item) => (
-          <div key={item.id} className='group'>
-            <div className="flex items-start justify-start gap-[20px]">
+            <div key={item.id}  className=" group flex items-start justify-start gap-[20px]">
               <div className=" p-4  bg-white rounded-lg shadow-sm  ">
                 <label className="block text-sm font-medium text-gray-700 mb-1">
                   New {item.type.toUpperCase()}
@@ -81,7 +80,7 @@ const Modul = () => {
                 <DeleteOutlined />
               </button>
             </div>
-          </div>
+          
         ))}
         {hasInputs && (
           <button
@@ -92,7 +91,7 @@ const Modul = () => {
           </button>
         )}
       </div>
-
+   
     </div>
   );
 }
