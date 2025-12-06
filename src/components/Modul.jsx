@@ -1,7 +1,7 @@
 import { CloseOutlined, DeleteOutlined, PlusOutlined } from '@ant-design/icons';
 import { useState } from 'react'
 import Inputs from './input/Inputs';
-import useFormState from './store/useFormState';
+import useFormState from '../store/useFormState';
 
 const Modul = () => {
   const [open, setOpen] = useState(false);
@@ -60,38 +60,38 @@ const Modul = () => {
 
       <div className='mt-4 flex  items-center justify-center flex-col gap-4'>
         {form.map((item) => (
-            <div key={item.id}  className=" group flex items-start justify-start gap-[20px]">
-              <div className=" p-4  bg-white rounded-lg shadow-sm  ">
-                <label className="block text-sm font-medium text-gray-700 mb-1">
-                  New {item.type.toUpperCase()}
-                </label>
-                <input
-                  // Inputun tipini state-dən alırıq (item.type)
-                  type={item.type}
-                  placeholder={`Dəyəri daxil edin... (${item.type})`}
-                  // Inputun dəyərini state-dən alırıq
-                  value={item.value}
-                  // Dəyişiklik olanda state-i yeniləyirik
-                  onChange={(e) => handleInputChange(item.id, e)}
-                  className="mt-1 block w-[450px] border rounded-md shadow-sm p-2 focus:ring-blue-500 focus:border-blue-500"
-                />
-              </div>
-              <button onClick={() => removebtn(item.id)} className=" p-4 bg-white rounded-lg shadow-sm flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
-                <DeleteOutlined />
-              </button>
+          <div key={item.id} className=" group flex items-start justify-start gap-[20px]">
+            <div className=" p-4  bg-white rounded-lg shadow-sm  ">
+              <label className="block text-sm font-medium text-gray-700 mb-1">
+                New {item.type.toUpperCase()}
+              </label>
+              <input
+                // Inputun tipini state-dən alırıq (item.type)
+                type={item.type}
+                placeholder={`Dəyəri daxil edin... (${item.type})`}
+                // Inputun dəyərini state-dən alırıq
+                value={item.value}
+                // Dəyişiklik olanda state-i yeniləyirik
+                onChange={(e) => handleInputChange(item.id, e)}
+                className="mt-1 block w-[450px] border rounded-md shadow-sm p-2 focus:ring-blue-500 focus:border-blue-500"
+              />
             </div>
-          
+            <button onClick={() => removebtn(item.id)} className=" p-4 bg-white rounded-lg shadow-sm flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+              <DeleteOutlined />
+            </button>
+          </div>
+
         ))}
         {hasInputs && (
           <button
             onClick={() => setOpen(true)}
             className="mt-4 bg-gray-200 text-gray-700 p-1 rounded-lg flex items-center hover:bg-gray-300 transition"
           >
-            <PlusOutlined className='mr-2'/> Add
+            <PlusOutlined className='mr-2' /> Add
           </button>
         )}
       </div>
-   
+
     </div>
   );
 }

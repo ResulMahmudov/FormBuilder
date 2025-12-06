@@ -1,4 +1,5 @@
-import { EditOutlined,  EyeOutlined, SaveOutlined } from '@ant-design/icons'
+import { EditOutlined, EyeOutlined, SaveOutlined } from '@ant-design/icons'
+import { Link } from 'react-router-dom'
 
 const Header = () => {
   return (
@@ -8,12 +9,18 @@ const Header = () => {
       </div>
       <div className='flex  gap-4 items-center justify-center'>
         <div className='bg-[#f5f5f7] rounded-lg flex border items-center justify-center gap-4 w-[170px] h-[33px]'>
-          <div className='bg-white border w-[60px] h-[25px] rounded-[5px] flex items-center justify-center'>
-            <button className='text-sm flex gap-2'><EditOutlined /> Edit</button>
-          </div>
-          <div>
-            <button className='text-sm flex gap-2'><EyeOutlined /> Preview</button>
-          </div>
+          <Link to="/">
+            <div className='bg-white border w-[60px] h-[25px] rounded-[5px] flex items-center justify-center'>
+              <button className='text-sm flex gap-2'><EditOutlined /> Edit</button>
+            </div>
+          </Link>
+          <Link to="/preview">
+            <div>
+              <button className='text-sm flex gap-2'>
+                <EyeOutlined /> Preview
+              </button>
+            </div>
+          </Link>
         </div>
 
         <div className='flex items-center justify-center gap-6'>
